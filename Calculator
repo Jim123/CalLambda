@@ -9,18 +9,26 @@ print ("Value of total : ", sum( x,y ))
 
 diff = lambda arg1, arg2: arg1 - arg2;
 
-# Now you can call sum as a function
+# Now you can call diff as a function
 print ("Value of total : ", diff( x,y ))
 print("Value of total : ", diff( x,y ))
 
 mul = lambda arg1, arg2: arg1 * arg2;
 
-# Now you can call sum as a function
+# Now you can call mul as a function
 print ("Value of total : ", mul( x,y ))
 print("Value of total : ", mul( x,y))
 
 div = lambda arg1, arg2: arg1 / arg2;
 
-# Now you can call sum as a function
+# Now you can call div as a function
 print ("Value of total : ", div( x,y ))
 print("Value of total : ", div( x,y ))
+
+
+
+
+
+
+
+
