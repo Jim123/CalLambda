@@ -1,0 +1,156 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOq3GCLhsMgtLvY21MJFk8a",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Jim123/CalLambda/blob/master/Copy_of_wordcount\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "W5Z5I73gBM8S"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "9OOtHqwKBN1B"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "ZrbmAbVfBXVR"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "def word_guessing_game():\n",
+        "    words = [\"python\", \"coding\", \"programming\", \"computer\", \"software\", \"hardware\"]\n",
+        "    word = random.choice(words)\n",
+        "\n",
+        "    guesses_left = 6\n",
+        "    guessed_letters = []\n",
+        "\n",
+        "    while guesses_left > 0:\n",
+        "        print(\"\\nGuess the word:\")\n",
+        "        for letter in word:\n",
+        "            if letter in guessed_letters:\n",
+        "                print(letter, end=\" \")\n",
+        "            else:\n",
+        "                print(\"_\", end=\" \")\n",
+        "        print(\"\\n\")\n",
+        "\n",
+        "        guess = input(\"Enter your guess: \").lower()\n",
+        "\n",
+        "        if guess in word:\n",
+        "            guessed_letters.append(guess)\n",
+        "            if set(guessed_letters) == set(word):\n",
+        "                print(f\"\\nCongratulations! You guessed the word: {word}\")\n",
+        "                return\n",
+        "        else:\n",
+        "            guesses_left -= 1\n",
+        "            print(f\"Incorrect guess. {guesses_left} guesses remaining.\")\n",
+        "\n",
+        "    print(f\"\\nYou've run out of guesses. The word was: {word}\")\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    word_guessing_game()\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "doZJUe0nBbEo",
+        "outputId": "2333173f-4437-4397-d2dd-5b6bfbe092c4",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Guess the word:\n",
+            "_ _ _ _ _ _ \n",
+            "\n",
+            "Enter your guess: p\n",
+            "Incorrect guess. 5 guesses remaining.\n",
+            "\n",
+            "Guess the word:\n",
+            "_ _ _ _ _ _ \n",
+            "\n",
+            "Enter your guess: y\n",
+            "Incorrect guess. 4 guesses remaining.\n",
+            "\n",
+            "Guess the word:\n",
+            "_ _ _ _ _ _ \n",
+            "\n",
+            "Enter your guess: o\n",
+            "\n",
+            "Guess the word:\n",
+            "_ o _ _ _ _ \n",
+            "\n",
+            "Enter your guess: c\n",
+            "\n",
+            "Guess the word:\n",
+            "c o _ _ _ _ \n",
+            "\n",
+            "Enter your guess: d\n",
+            "\n",
+            "Guess the word:\n",
+            "c o d _ _ _ \n",
+            "\n",
+            "Enter your guess: i\n",
+            "\n",
+            "Guess the word:\n",
+            "c o d i _ _ \n",
+            "\n",
+            "Enter your guess: n\n",
+            "\n",
+            "Guess the word:\n",
+            "c o d i n _ \n",
+            "\n",
+            "Enter your guess: g\n",
+            "\n",
+            "Congratulations! You guessed the word: coding\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
